@@ -1,0 +1,8 @@
+---
+en:
+  zoom_photos:
+    loading: Loading zoom...
+    instruction:
+      zoom_and_enlarge: Mouseover to zoom or click to enlarge
+      zoom: Mouseover to zoom
+      enlarge: Enlarge
