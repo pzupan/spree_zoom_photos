@@ -7,7 +7,7 @@
   </ul>
 <% end %>
 
-<% if @product.variants? 
+<% if @product.has_variants? 
   has_checked = false %>
   <h4 id="variant-images">
   	<%= t('images_for') %>: 

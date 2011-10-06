@@ -1,0 +1,12 @@
+<% if image_controls.enable_any? %>
+  </div><%# Hack to end main-image div early %>
+  <p class="image-instructions" align='center'>
+    <% if image_controls.enable_zoom? %>
+      <%= t('zoom_photos.instruction.zoom') %><br />
+    <% end %>
+    <% if image_controls.enable_enlarge? %>
+      <%= link_to(t('zoom_photos.instruction.enlarge'), product_image_path(@product, :large), :class => 'enlargeable') %>
+    <% end %>
+  </p>
+  <div><%# Open div is a hack to match the closing tag in the calling template %>
+<% end %>
