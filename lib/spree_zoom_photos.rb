@@ -9,11 +9,7 @@ module ZoomPhotos
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
         Rails.env.production? ? require(c) : load(c)
       end
-      
-      Spree::BaseController.class_eval do
-        logger.warn "zoom photos base controller class eval"
-      end
-      
+      require 'zoom_photos/image_controls'
     end
     
     config.to_prepare &method(:activate).to_proc
